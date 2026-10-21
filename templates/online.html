@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2457d6">
+    <title>Play Online | AI Chess Coach</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>♞ AI Chess Coach</h1>
+    <p>Play chess with your friends online</p>
+</header>
+
+<main class="container">
+
+    <div class="game-top">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h2>🌐 Online Multiplayer</h2>
+        <p>Create a room or join your friend's room using a code.</p>
+    </div>
+
+    <section class="online-grid">
+
+        <div class="card online-card">
+            <div class="mode-icon">➕</div>
+            <h3>Create a Room</h3>
+            <p>Create a new game and share its room code with your friend.</p>
+            <button id="create-room-btn" type="button">
+                Create Room
+            </button>
+        </div>
+
+        <div class="card online-card">
+            <div class="mode-icon">🔑</div>
+            <h3>Join a Room</h3>
+            <p>Enter the room code your friend shared with you.</p>
+
+            <label for="room-code">Room Code</label>
+            <input
+                id="room-code"
+                type="text"
+                maxlength="6"
+                placeholder="e.g. A7K2PQ"
+                autocomplete="off"
+            >
+
+            <button id="join-room-btn" type="button">
+                Join Room
+            </button>
+        </div>
+
+    </section>
+
+    <section class="card room-status">
+        <h3>Room Status</h3>
+        <p id="online-message">Create a room or enter a code to join.</p>
+
+        <div id="room-details" hidden>
+            <p>Your room code:</p>
+            <strong id="display-room-code" class="room-code"></strong>
+            <button id="copy-code-btn" type="button">Copy Room Code</button>
+            <p id="player-color"></p>
+            <p>Share the code with your friend to invite them.</p>
+            <a id="open-game-link" class="mode-button" href="/online-game">
+                Open Chessboard →
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        AI Chess Coach · Online Multiplayer · Room Code
+    </footer>
+
+</main>
+
+<script src="/static/online.js"></script>
+</body>
+</html>

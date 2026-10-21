@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2457d6">
+    <title>Chess Arena | AI Chess Coach</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>♞ AI Chess Coach</h1>
+    <p id="mode-subtitle">Your personal chess arena</p>
+</header>
+
+<main class="container">
+
+    <div class="game-top">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h2 id="game-title">Chess Arena</h2>
+        <p id="game-description">Play, learn, and improve your moves.</p>
+    </div>
+
+    <section class="game-layout">
+
+        <div class="game-panel">
+
+            <div class="board-heading">
+                <h3>♟ Chess Board</h3>
+                <span id="turn-label">Loading game...</span>
+            </div>
+
+            <div id="board" class="board" aria-label="Chessboard"></div>
+
+            <div class="buttons">
+                <button id="hint-btn" type="button">✦ Get a Hint (H)</button>
+                <button id="reset-btn" type="button">↻ New Game (R)</button>
+            </div>
+
+            <div id="hint-box" class="message">
+                Your hints will appear here.
+            </div>
+
+            <div id="feedback" class="message">
+                Starting your chess game...
+            </div>
+
+        </div>
+
+        <aside class="side-panel">
+
+            <section class="card">
+                <h3>🧠 AI Coach</h3>
+                <p id="computer-message">Get ready to play!</p>
+            </section>
+
+            <section class="card">
+                <h3>Game Statistics</h3>
+                <p>Difficulty: <strong id="difficulty">Easy</strong></p>
+                <p>Your moves: <strong id="player-moves">0</strong></p>
+                <p>Your captures: <strong id="player-captures">0</strong></p>
+                <p>AI captures: <strong id="ai-captures">0</strong></p>
+                <p>Good moves: <strong id="good-moves">0</strong></p>
+                <p>Mistakes: <strong id="mistakes">0</strong></p>
+                <p>Performance: <strong id="performance-score">50</strong></p>
+            </section>
+
+            <section class="card">
+                <h3>📜 Move History</h3>
+                <div id="move-history">Moves will appear here.</div>
+            </section>
+
+            <section class="card">
+                <h3>🏆 Game Report</h3>
+                <p id="game-report">Your report will appear here.</p>
+            </section>
+
+        </aside>
+
+    </section>
+
+    <footer>
+        AI Chess Coach · Python · Flask · Minimax AI
+    </footer>
+
+</main>
+
+<script src="/static/game.js"></script>
+</body>
+</html>
